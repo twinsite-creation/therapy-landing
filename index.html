@@ -3,119 +3,173 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Психолог-психотерапевт | Киів та онлайн</title>
+    <title>Анастасія Хотімська — Психолог-психотерапевт</title>
     <meta
       name="description"
-      content="Практикуючий психолог. Індивідуальна та парна терапія в Києві та онлайн. 7 років досвіду, 1500+ годин практики."
+      content="Практикуючий психолог-психотерапевт. Індивідуальна та парна терапія в Дніпрі та онлайн. 7 років досвіду, 1500+ годин практики."
     />
     <link rel="alternate" hreflang="uk" href="/index.html" />
     <link rel="alternate" hreflang="en" href="/index-en.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
-
   <body>
-    <!-- NAV -->
-    <nav id="navbar">
-      <a href="#header" class="nav-logo">Практикуючий психолог</a>
-      <ul class="nav-links">
-        <li><a href="#concerns">Запити</a></li>
-        <li><a href="#about">Про мене</a></li>
-        <li><a href="#services">Послуги</a></li>
-        <li><a href="#testimonials">Відгуки</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-      <div class="nav-right">
-        <a href="tel:+380961253385" class="nav-phone">+38 (096) 125-33-85</a>
-        <!--<div class="lang-switch">
-          <a href="/index.html" class="active">УКР</a>
-          <span>/</span>
-          <a href="/index-en.html">ENG</a>
-        </div>-->
-        <button class="burger" aria-label="Меню" id="burgerBtn">
-          <span></span><span></span><span></span>
-        </button>
+    <!-- Scroll progress bar -->
+    <div class="scroll-bar" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="header__inner">
+        <!-- Logo -->
+        <a href="#hero" class="header__logo">
+          <span class="header__logo-name">Анастасія Хотімська</span>
+          <span class="header__logo-sub">Психотерапевт</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="header__nav" aria-label="Головна навігація">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#about" class="header__nav-link">Про мене</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#approach" class="header__nav-link">Підхід</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#services" class="header__nav-link">Послуги</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#testimonials" class="header__nav-link">Відгуки</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#contact" class="header__nav-link">Контакт</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right controls -->
+        <div class="header__controls">
+          <div class="header__lang">
+            <a
+              href="/index.html"
+              class="header__lang-btn header__lang-btn--active"
+              >УКР</a
+            >
+            <span class="header__lang-sep" aria-hidden="true">/</span>
+            <a href="/index-en.html" class="header__lang-btn">ENG</a>
+          </div>
+          <a href="#contact" class="header__cta">Записатися</a>
+          <button
+            class="header__burger"
+            id="burgerBtn"
+            aria-label="Відкрити меню"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </div>
       </div>
-    </nav>
+    </header>
 
     <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#concerns" class="mobile-link">Запити</a>
-      <a href="#about" class="mobile-link">Про мене</a>
-      <a href="#services" class="mobile-link">Послуги</a>
-      <a href="#testimonials" class="mobile-link">Відгуки</a>
-      <a href="#faq" class="mobile-link">FAQ</a>
-      <a href="tel:+380961253385">+38 (096) 125-33-85</a>
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Мобільне меню"
+    >
+      <div class="mobile-menu__inner">
+        <nav aria-label="Мобільна навігація">
+          <a href="#about" class="mobile-menu__link mobile-link">Про мене</a>
+          <a href="#approach" class="mobile-menu__link mobile-link">Підхід</a>
+          <a href="#services" class="mobile-menu__link mobile-link">Послуги</a>
+          <a href="#testimonials" class="mobile-menu__link mobile-link"
+            >Відгуки</a
+          >
+          <a href="#contact" class="mobile-menu__link mobile-link">Контакт</a>
+        </nav>
+        <div class="mobile-menu__footer">
+          <a href="tel:+380961253385" class="mobile-menu__phone"
+            >+38 (096) 125-33-85</a
+          >
+          <a
+            href="https://t.me/nchernygina"
+            class="mobile-menu__cta"
+            target="_blank"
+            rel="noopener"
+          >
+            Записатися
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 8h10M9 4l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- HERO -->
-    <section class="hero" id="header">
-      <div class="hero-bg">
-        <img
-          class="hero-bg__img"
-          src="assets/images/hero-psychologist.webp"
-          alt="психолог-психотерапевт"
-        />
-        <div class="hero-bg__overlay"></div>
-        <div class="hero-bg__vignette"></div>
+    <section class="hero" id="hero">
+      <!-- Background organic shapes -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1" data-parallax="0.06"></div>
+        <div class="blob blob-2" data-parallax="0.10"></div>
+        <div class="blob blob-3" data-parallax="0.04"></div>
       </div>
 
-      <div class="hero-split">
-        <div class="hero-image-panel">
-          <div class="hero-image-frame">
-            <img
-              class="hero-portrait"
-              src="assets/images/hero-psychologist.webp"
-              alt="психолог-психотерапевт"
-            />
-            <div class="hero-portrait__shine"></div>
-          </div>
-          <div class="hero-image-caption" aria-hidden="true">
-            <span class="hero-caption__line"></span>
-            <span class="hero-caption__text">Анастасія Хотімська</span>
-          </div>
-        </div>
-
+      <div class="hero-inner">
         <div class="hero-content">
-          <div class="hero-eyebrow">
-            <span class="hero-eyebrow__dot"></span>
-            <span>Психолог · Психотерапевт · Дніпро & онлайн</span>
+          <div class="hero-eyebrow reveal" data-reveal="top" data-delay="0">
+            <span class="eyebrow-dot"></span>
+            Психолог-психотерапевт · Дніпро та онлайн
+          </div>
+          <div class="process-step reveal" data-reveal="tl" data-delay="0">
+            <h1
+              class="hero-title"
+            >
+              Простір, де<br />
+              <span class="hero-title-accent">вас чують</span><br />
+              без осуду
+            </h1>
           </div>
 
-          <h1 class="hero-heading">
-            <span class="hero-heading__line hero-heading__line--1"
-              >Тут можна</span
-            >
-            <span class="hero-heading__line hero-heading__line--2"
-              >бути собою</span
-            >
-          </h1>
+          <div class="process-step reveal" data-reveal="tr" data-delay="70">
+            <p class="hero-lead">
+              Я допомагаю людям знайти себе — не через діагнози, а через глибоке
+              розуміння власної особистості. Безпечно, тепло, з повагою.
+            </p>
+          </div>
 
-          <p class="hero-sub">
-            Безпечний простір, де вас почують без осуду.<br />
-            Разом ми знаходимо першопричини й створюємо справжні зміни.
-          </p>
-
-          <div class="hero-cta-row">
-            <a
-              href="https://t.me/nchernygina"
-              class="hero-cta"
-              target="_blank"
-              rel="noopener"
-            >
-              <span class="hero-cta__label">Записатись на сесію</span>
-              <span class="hero-cta__arrow">
+          <div class="process-step reveal" data-reveal="bl" data-delay="140">
+            <div class="hero-actions">
+              <a href="#contact" class="btn-primary">
+                <span>Записатися на сесію</span>
                 <svg
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <path
                     d="M3 8h10M9 4l4 4-4 4"
@@ -125,349 +179,555 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </span>
-            </a>
-            <a href="#about" class="hero-link">Дізнатися більше</a>
+              </a>
+              <a href="#about" class="btn-ghost">Дізнатися більше</a>
+            </div>
           </div>
 
-          <div class="hero-stats-row">
-            <div class="hero-stat">
-              <span class="hero-stat__num">7</span>
-              <span class="hero-stat__label">Років практики</span>
+          <div class="hero-stats reveal" data-reveal="bottom" data-delay="200">
+            <div class="stat">
+              <span class="stat-num">7</span>
+              <span class="stat-label">Років практики</span>
             </div>
-            <div class="hero-stat-div"></div>
-            <div class="hero-stat">
-              <span class="hero-stat__num">1500+</span>
-              <span class="hero-stat__label">Годин терапії</span>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat-num">1500+</span>
+              <span class="stat-label">Годин терапії</span>
             </div>
-            <div class="hero-stat-div"></div>
-            <div class="hero-stat">
-              <span class="hero-stat__num">TFP</span>
-              <span class="hero-stat__label">Сертифікований терапевт</span>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat-num">2019</span>
+              <span class="stat-label">Рік заснування</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-reveal="right" data-delay="100">
+          <div class="hero-photo-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=900&auto=format&fit=crop&q=85"
+              alt="Анастасія Хотімська, психолог-психотерапевт"
+              class="hero-photo"
+              width="540"
+              height="680"
+              loading="eager"
+            />
+            <div class="hero-photo-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="hero-badge reveal" data-reveal="bl" data-delay="200">
+            <div class="badge-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div class="badge-text">
+              <span>Сертифікований TFP-терапевт</span>
+              <span class="badge-sub">Член НПА України</span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="hero-scroll-hint" aria-hidden="true">
-        <span class="hero-scroll-hint__line"></span>
-        <span class="hero-scroll-hint__text">Гортайте</span>
+        <div class="scroll-line"></div>
+        <svg
+          class="scroll-arrow"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M12 5v14M5 16l7 7 7-7"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="about-visual">
+          <div class="about-img-main reveal" data-reveal="left" data-delay="0">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&auto=format&fit=crop&q=85"
+              alt="Психолог на сесії"
+              width="480"
+              height="580"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-img-accent reveal" data-reveal="br" data-delay="160">
+            <img
+              src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=400&auto=format&fit=crop&q=80"
+              alt="Кабінет психолога"
+              width="220"
+              height="260"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-quote reveal" data-reveal="left" data-delay="240">
+            <p>Зміни починаються з безпечного простору, де вас чують</p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-eyebrow reveal" data-reveal="top" data-delay="0">Про мене</div>
+          <h2 class="section-title reveal" data-reveal="bottom" data-delay="60">
+            Підхід, заснований на<br />науці та людяності
+          </h2>
+          <p class="about-lead reveal" data-reveal="bottom" data-delay="120">
+            Я практикуючий психолог-психоаналітик із медичною та психологічною
+            освітою. Мій підхід — поєднання сучасних методів терапії з глибинним
+            розумінням кожної особистості.
+          </p>
+          <p class="about-body reveal" data-reveal="bottom" data-delay="160">
+            Я вірю, що кожна людина має власний ресурс для змін. Моя роль —
+            допомогти вам знайти цей ресурс і навчитися ним користуватися.
+          </p>
+
+          <div class="credentials reveal" data-reveal="left" data-delay="200">
+            <div class="credential">
+              <div class="credential-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <strong>Магістр практичної психології</strong>
+                <span>Університет імені Т. Шевченка · 2019–2021</span>
+              </div>
+            </div>
+            <div class="credential">
+              <div class="credential-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <strong>Лікар-спеціаліст</strong>
+                <span>Дніпропетровська медична академія · 2013–2020</span>
+              </div>
+            </div>
+            <div class="credential">
+              <div class="credential-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <strong>Докторант DPPClinPrac</strong>
+                <span>University of Exeter · у процесі</span>
+              </div>
+            </div>
+            <div class="credential">
+              <div class="credential-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <strong>Сертифікований TFP-терапевт</strong>
+                <span>Член Української групи TFP-терапевтів</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-chips reveal" data-reveal="bottom" data-delay="240">
+            <span class="chip">Психоаналіз</span>
+            <span class="chip">TFP-терапія</span>
+            <span class="chip">Емоційно-фокусована терапія</span>
+            <span class="chip">Робота з травмою</span>
+            <span class="chip">ПТСР</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CONCERNS -->
     <section class="concerns" id="concerns">
       <div class="concerns-inner">
-        <div class="concerns-left">
-          <div class="section-tag">Із чим я працюю</div>
-          <h2 class="section-title">
-            Коли варто<br />звернутися<br />до <em>терапевта</em>
+        <div class="concerns-header">
+          <div class="section-eyebrow reveal" data-reveal="top" data-delay="0">Із чим я працюю</div>
+          <h2 class="section-title reveal" data-reveal="bottom" data-delay="60">
+            Коли варто звернутися до терапевта
           </h2>
-          <p>
+          <p class="concerns-lead reveal" data-reveal="bottom" data-delay="120">
             Кожна людина заслуговує підтримки — незалежно від того, наскільки
             «серйозною» здається її проблема. Іноді достатньо відчуття, що щось
             не так.
           </p>
-          <div class="concerns-img">
-            <img
-              src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=700&auto=format&fit=crop&q=80"
-              alt="Комфортний кабінет психолога"
-            />
-          </div>
         </div>
 
-        <div class="concerns-grid">
-          <div class="concern-note">
-            При наявності психіатричного діагнозу або необхідності
-            фармакотерапії — працюю виключно в парі з лікарем-психіатром.
+        <div class="concerns-layout">
+          <!-- Left column: big featured items -->
+          <div class="concerns-featured">
+            <div class="concern-featured-item reveal" data-reveal="left" data-delay="0">
+              <span class="concern-tag">Особистість</span>
+              <h3>
+                Невпевненість у собі, низька самооцінка та почуття безпорадності
+              </h3>
+              <p>
+                Коли внутрішній критик голосніший за вас — і важко зрозуміти,
+                чого ви насправді хочете.
+              </p>
+            </div>
+            <div class="concern-featured-item reveal" data-reveal="left" data-delay="80">
+              <span class="concern-tag">Емоції</span>
+              <h3>Тривога, страхи, панічні атаки та депресія</h3>
+              <p>
+                Коли емоції захлиснули і здається, що виходу немає — але він є.
+              </p>
+            </div>
+            <div class="concern-featured-item reveal" data-reveal="left" data-delay="160">
+              <span class="concern-tag">Стосунки</span>
+              <h3>Труднощі у стосунках, конфлікти та сімейні кризи</h3>
+              <p>
+                Коли близькі люди стають чужими — і ви вже не пам'ятаєте, як
+                було добре.
+              </p>
+            </div>
           </div>
-          <div class="concern-item">
-            <div class="concern-num">01</div>
-            <h3>Невпевненість у собі та почуття безпорадності</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">02</div>
-            <h3>Прокрастинація та відсутність мотивації</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">03</div>
-            <h3>Питання самооцінки та самореалізації</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">04</div>
-            <h3>Емоційна нестабільність</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">05</div>
-            <h3>Тривога, страхи, фобії</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">06</div>
-            <h3>Невротичні та емоційні розлади</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">07</div>
-            <h3>Депресія, апатія, панічні атаки</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">08</div>
-            <h3>Ознаки ПТСР</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">09</div>
-            <h3>Розлади особистості (МРО, НРО)</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">10</div>
-            <h3>Труднощі у стосунках та конфлікти</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">11</div>
-            <h3>Сімейна криза після появи дитини</h3>
-          </div>
-          <div class="concern-item">
-            <div class="concern-num">12</div>
-            <h3>Професійні відносини та вирішення конфліктів</h3>
+
+          <!-- Right column: visual + tags -->
+          <div class="concerns-right">
+            <div class="concerns-img-wrap reveal" data-reveal="right" data-delay="0">
+              <img
+                src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=700&auto=format&fit=crop&q=80"
+                alt="Безпечний простір для терапії"
+                loading="lazy"
+                width="480"
+                height="380"
+              />
+              <div class="concerns-img-caption">
+                Безпечний простір — для будь-якого запиту
+              </div>
+            </div>
+
+            <div class="concerns-tags reveal" data-reveal="right" data-delay="80">
+              <span class="ctag">Прокрастинація</span>
+              <span class="ctag">ПТСР</span>
+              <span class="ctag">Самореалізація</span>
+              <span class="ctag">МРО / НРО</span>
+              <span class="ctag">Апатія</span>
+              <span class="ctag">Емоційна нестабільність</span>
+              <span class="ctag">Мотивація</span>
+              <span class="ctag">Невротичні розлади</span>
+              <span class="ctag">Робота з травмою</span>
+            </div>
+
+            <div class="concerns-note reveal" data-reveal="right" data-delay="160">
+              <div class="concerns-note-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <p>
+                При психіатричному діагнозі або необхідності фармакотерапії —
+                працюю виключно в парі з лікарем-психіатром.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <div class="about-grid">
-        <div class="about-images">
-          <div class="about-img-main">
-            <img
-              src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&auto=format&fit=crop&q=80"
-              alt="Анастасія Хотімська на сесії"
-            />
-          </div>
-          <div class="about-img-accent">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80"
-              alt="Освіта та сертифікати"
-            />
-          </div>
-        </div>
-        <div class="about-content">
-          <div class="section-tag">Про мене</div>
-          <h2 class="section-title">
-            Підхід, заснований на <em>науці</em> та людяності
+    <!-- APPROACH -->
+    <section class="approach" id="approach">
+      <div class="approach-inner">
+        <div class="approach-header">
+          <div class="section-eyebrow reveal" data-reveal="top" data-delay="0">Як ми працюємо</div>
+          <h2 class="section-title reveal" data-reveal="bottom" data-delay="60">
+            Прозорий процес від першого кроку
           </h2>
-          <p>
-            Я практикуючий психолог-психоаналітик із медичною та психологічною
-            освітою. Мій підхід — це поєднання сучасних методів терапії з
-            глибинним розумінням особистості кожного клієнта.
+          <p class="approach-lead reveal" data-reveal="bottom" data-delay="120">
+            Перед початком терапії ми проводимо 1–2 діагностичні сесії, щоб
+            зрозуміти вашу ситуацію та знайти найкращий формат роботи.
           </p>
-          <p>
-            Я вірю, що зміни можливі — і вони починаються з безпечного простору,
-            де вас чують без засуджень.
-          </p>
+        </div>
 
-          <div class="credentials">
-            <div class="credential-item">
-              <strong>Магістр практичної психології</strong> — Університет імені
-              Т.Шевченка (2019–2021)
-            </div>
-            <div class="credential-item">
-              <strong>Лікар-спеціаліст</strong> — Дніпропетровська медична
-              академія (2013–2020)
-            </div>
-            <div class="credential-item">
-              <strong>Докторант DPPClinPrac</strong> — University of Exeter (у
-              процесі)
-            </div>
-            <div class="credential-item">
-              <strong>Сертифікований TFP-терапевт</strong> — член Української
-              групи TFP-терапевтів
-            </div>
-            <div class="credential-item">
-              <strong>Член НПА України</strong> — Дивізіон психоаналітичної
-              психології
+        <div class="process-steps">
+          <div class="process-step reveal" data-reveal="bl" data-delay="0">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-content">
+              <div class="step-phase">Перший етап</div>
+              <h3>Діагностичні сесії</h3>
+              <ul>
+                <li>Знайомство та обговорення вашого запиту</li>
+                <li>Глибинне інтерв'ю для розуміння особистості</li>
+                <li>Залучення близьких, якщо це необхідно</li>
+                <li>Зворотний зв'язок та план подальшої роботи</li>
+              </ul>
             </div>
           </div>
 
-          <div class="about-chips">
-            <span class="chip">Психоаналіз</span>
-            <span class="chip">TFP-терапія</span>
-            <span class="chip">Емоційно-фокусована терапія</span>
-            <span class="chip">Робота з травмою</span>
-            <span class="chip">ПТСР</span>
-            <span class="chip">Волонтерська діяльність</span>
+          <div class="process-step reveal" data-reveal="bottom" data-delay="80">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-content">
+              <div class="step-phase">Основна робота</div>
+              <h3>Терапевтичні сесії</h3>
+              <ul>
+                <li>Ви говорите про все, що вас хвилює</li>
+                <li>Я ставлю запитання та висловлюю гіпотези</li>
+                <li>Разом аналізуємо ситуації та почуття</li>
+                <li>Формуємо нові способи реагування</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step reveal" data-reveal="bottom" data-delay="160">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-content">
+              <div class="step-phase">Частота</div>
+              <h3>Індивідуальний ритм</h3>
+              <ul>
+                <li>Найчастіше — 2 рази на тиждень</li>
+                <li>Можливо 1 або 3 рази залежно від запиту</li>
+                <li>Підтримуюча терапія — раз на 2 тижні</li>
+                <li>Тривалість визначається індивідуально</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-step reveal" data-reveal="br" data-delay="240">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-content">
+              <div class="step-phase">Конфіденційність</div>
+              <h3>Безпека та довіра</h3>
+              <ul>
+                <li>Повна конфіденційність онлайн та офлайн</li>
+                <li>Письмовий або усний контракт за потреби</li>
+                <li>Принцип "тут і зараз" — без оцінок</li>
+                <li>Безпечний простір для будь-яких тем</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- PROCESS -->
-    <section class="process" id="process">
-      <div class="process-header">
-        <div>
-          <div class="section-tag">Як ми працюємо</div>
-          <h2 class="section-title">Прозорий процес<br />від першого кроку</h2>
+        <div class="approach-image reveal" data-reveal="bottom" data-delay="0">
+          <img
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&auto=format&fit=crop&q=80"
+            alt="Онлайн-консультація з психологом"
+            loading="lazy"
+            width="1200"
+            height="450"
+          />
         </div>
-        <p>
-          Перед початком терапії ми проводимо 1–2 діагностичні сесії. Це
-          допомагає мені зрозуміти вашу ситуацію та запропонувати найбільш
-          підходящий формат роботи.
-        </p>
-      </div>
-
-      <div class="process-steps">
-        <div class="process-step" data-step="01">
-          <div class="step-phase">Перший етап</div>
-          <h3>Діагностичні сесії</h3>
-          <ul>
-            <li>Знайомство та обговорення вашого запиту</li>
-            <li>Глибинне інтерв'ю для розуміння особистості</li>
-            <li>Залучення близьких, якщо це необхідно</li>
-            <li>Зворотний зв'язок та план подальшої роботи</li>
-          </ul>
-        </div>
-        <div class="process-step" data-step="02">
-          <div class="step-phase">Основна робота</div>
-          <h3>Терапевтичні сесії</h3>
-          <ul>
-            <li>Ви говорите про все, що вас хвилює</li>
-            <li>Я ставлю запитання та висловлюю гіпотези</li>
-            <li>Разом аналізуємо ситуації та почуття</li>
-            <li>Формуємо нові способи реагування</li>
-          </ul>
-        </div>
-        <div class="process-step" data-step="03">
-          <div class="step-phase">Частота зустрічей</div>
-          <h3>Індивідуальний ритм</h3>
-          <ul>
-            <li>Найчастіше — 2 рази на тиждень</li>
-            <li>Можливо 1 або 3 рази залежно від запиту</li>
-            <li>Підтримуюча терапія — раз на 2 тижні</li>
-            <li>Тривалість визначається індивідуально</li>
-          </ul>
-        </div>
-        <div class="process-step" data-step="04">
-          <div class="step-phase">Конфіденційність</div>
-          <h3>Безпека та довіра</h3>
-          <ul>
-            <li>Повна конфіденційність онлайн та офлайн</li>
-            <li>Письмовий або усний контракт за потреби</li>
-            <li>Принцип "тут і зараз" — без оцінок</li>
-            <li>Безпечний простір для будь-яких тем</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="process-image">
-        <img
-          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&auto=format&fit=crop&q=80"
-          alt="Онлайн-консультація з психологом"
-        />
       </div>
     </section>
 
     <!-- SERVICES -->
     <section class="services" id="services">
-      <div class="services-header">
-        <div>
-          <div class="section-tag">Послуги та вартість</div>
-          <h2 class="section-title">
-            Оберіть формат,<br />який підходить <em>вам</em>
-          </h2>
-        </div>
-        <div>
-          <div class="service-location">Онлайн або офлайн — місто Дніпро</div>
-          <p>
-            Кожна послуга розроблена під конкретний запит. Ціна відображає час,
-            досвід і глибину роботи. Перша діагностична сесія оплачується
-            окремо.
-          </p>
-        </div>
-      </div>
-
-      <div class="services-cards">
-        <div class="service-card">
-          <div class="service-card-img">
-            <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80"
-              alt="Індивідуальна терапія"
-            />
+      <div class="services-inner">
+        <div class="services-header">
+          <div>
+            <div class="section-eyebrow reveal" data-reveal="top" data-delay="0">Послуги та вартість</div>
+            <h2 class="section-title reveal" data-reveal="bottom" data-delay="60">
+              Оберіть формат,<br />який підходить вам
+            </h2>
           </div>
-          <div class="service-card-body">
-            <div class="service-type">Індивідуально</div>
-            <h3>Індивідуальна терапія</h3>
-            <p>
-              Особистий простір для роботи з вашим запитом. Ми працюємо з тим,
-              що важливо саме вам — без поспіху та без оцінок.
-            </p>
-            <div class="service-meta">
-              <span>Вартість: <strong>2 500 грн / сесія</strong></span>
-              <span>Тривалість: <strong>50 хвилин</strong></span>
-            </div>
-            <a
-              href="https://t.me/nchernygina"
-              class="btn-primary"
-              target="_blank"
-              rel="noopener"
-              >Записатися</a
-            >
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card-img">
-            <img
-              src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=600&auto=format&fit=crop&q=80"
-              alt="Парна терапія"
-            />
-          </div>
-          <div class="service-card-body">
-            <div class="service-type">Для пари</div>
-            <h3>Парна терапія</h3>
-            <p>
-              Допомагаю парам почути одне одного, вирішити конфлікти та
-              відновити близькість. Терапія для стосунків, які хочуть рости.
-            </p>
-            <div class="service-meta">
-              <span>Вартість: <strong>3 500 грн / сесія</strong></span>
-              <span>Тривалість: <strong>1,5 години</strong></span>
-            </div>
-            <a
-              href="https://t.me/nchernygina"
-              class="btn-primary"
-              target="_blank"
-              rel="noopener"
-              >Записатися</a
-            >
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card-img">
-            <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=80"
-              alt="Групові заходи та семінари"
-            />
-          </div>
-          <div class="service-card-body">
-            <div class="service-type">Групово</div>
-            <h3>Семінари та групова терапія</h3>
-            <p>
-              Лекції, семінари та групова терапія для організацій, колективів
-              або відкритих груп. Теми узгоджуються індивідуально.
-            </p>
-            <div class="service-meta">
-              <span>Вартість: <strong>від 3 000 грн</strong></span>
-              <span
-                >Формат та тривалість: <strong>за домовленістю</strong></span
+          <div class="services-header-right reveal" data-reveal="right" data-delay="60">
+            <div class="location-tag">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
               >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  fill="currentColor"
+                />
+              </svg>
+              Дніпро та онлайн
             </div>
-            <a
-              href="https://t.me/nchernygina"
-              class="btn-outline"
-              target="_blank"
-              rel="noopener"
-              >Дізнатися умови</a
-            >
+            <p>
+              Кожна послуга розроблена під конкретний запит. Перша діагностична
+              сесія оплачується окремо.
+            </p>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal" data-reveal="bl" data-delay="0">
+            <div class="service-card-top">
+              <div class="service-card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80"
+                  alt="Індивідуальна терапія"
+                  loading="lazy"
+                  width="480"
+                  height="280"
+                />
+              </div>
+              <div class="service-type">Індивідуально</div>
+            </div>
+            <div class="service-card-body">
+              <h3>Індивідуальна терапія</h3>
+              <p>
+                Особистий простір для роботи з вашим запитом. Ми працюємо з тим,
+                що важливо саме вам — без поспіху та без оцінок.
+              </p>
+              <div class="service-price">
+                <div class="price-row">
+                  <span class="price-label">Вартість</span>
+                  <span class="price-value">2 500 грн / сесія</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label">Тривалість</span>
+                  <span class="price-value">50 хвилин</span>
+                </div>
+              </div>
+              <a
+                href="https://t.me/a_khotimska"
+                class="btn-primary service-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                <span>Записатися</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card service-card-featured reveal" data-reveal="bottom" data-delay="80">
+            <div class="service-card-top">
+              <div class="service-card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=600&auto=format&fit=crop&q=80"
+                  alt="Парна терапія"
+                  loading="lazy"
+                  width="480"
+                  height="280"
+                />
+              </div>
+              <div class="service-type">Для пари</div>
+            </div>
+            <div class="service-card-body">
+              <h3>Парна терапія</h3>
+              <p>
+                Допомагаю парам почути одне одного, вирішити конфлікти та
+                відновити близькість. Для стосунків, які хочуть рости.
+              </p>
+              <div class="service-price">
+                <div class="price-row">
+                  <span class="price-label">Вартість</span>
+                  <span class="price-value">3 500 грн / сесія</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label">Тривалість</span>
+                  <span class="price-value">1,5 години</span>
+                </div>
+              </div>
+              <a
+                href="https://t.me/a_khotimska"
+                class="btn-primary service-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                <span>Записатися</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card reveal" data-reveal="br" data-delay="160">
+            <div class="service-card-top">
+              <div class="service-card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=80"
+                  alt="Семінари та групова терапія"
+                  loading="lazy"
+                  width="480"
+                  height="280"
+                />
+              </div>
+              <div class="service-type">Групово</div>
+            </div>
+            <div class="service-card-body">
+              <h3>Семінари та групова терапія</h3>
+              <p>
+                Лекції, семінари та групова терапія для організацій або
+                відкритих груп. Теми узгоджуються індивідуально.
+              </p>
+              <div class="service-price">
+                <div class="price-row">
+                  <span class="price-label">Вартість</span>
+                  <span class="price-value">від 3 000 грн</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label">Формат</span>
+                  <span class="price-value">за домовленістю</span>
+                </div>
+              </div>
+              <a
+                href="https://t.me/a_khotimska"
+                class="btn-ghost service-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                <span>Дізнатися умови</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -475,172 +735,186 @@
 
     <!-- TESTIMONIALS -->
     <section class="testimonials" id="testimonials">
-      <div class="testimonials-header">
-        <div class="section-tag" style="justify-content: center">Відгуки</div>
-        <h2 class="section-title">Що кажуть<br />мої <em>клієнти</em></h2>
-        <p style="margin-top: 0.6rem; color: var(--muted)">
-          Справжні слова людей, які пройшли шлях змін
-        </p>
-      </div>
-      <div class="testimonials-track-wrap">
-        <div class="testimonials-track">
-          <!-- Set 1 -->
-          <div class="testimonial-card">
-            <blockquote>
-              Дякую за сесії! Зараз помічаю, як можу сама аналізувати свої
-              вчинки, і мені значно легше. Я нарешті знаю, чого хочу.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">М</div>
-              <div>
-                <div class="testimonial-name">Марія</div>
-                <div class="testimonial-context">Індивідуальна терапія</div>
+      <div class="testimonials-inner">
+        <div class="testimonials-header">
+          <div class="section-eyebrow reveal" data-reveal="top" data-delay="0">Відгуки</div>
+          <h2 class="section-title reveal" data-reveal="bottom" data-delay="60">Що кажуть мої клієнти</h2>
+          <p class="testimonials-lead reveal" data-reveal="bottom" data-delay="120">
+            Справжні слова людей, які пройшли шлях змін
+          </p>
+        </div>
+
+        <div class="testimonials-track-wrap" aria-label="Відгуки клієнтів">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <div class="testimonial-card">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Дякую за сесії! Зараз помічаю, як можу сама аналізувати свої
+                вчинки, і мені значно легше. Я нарешті знаю, чого хочу.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">М</div>
+                <div>
+                  <div class="t-name">Марія</div>
+                  <div class="t-context">Індивідуальна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Останні 3 сесії були особливо значущими. Я реально можу сказати,
-              що у нас все добре. Продовжуємо ходити — наступного тижня, як
-              завжди!
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">О</div>
-              <div>
-                <div class="testimonial-name">Олена</div>
-                <div class="testimonial-context">Парна терапія</div>
+            <div class="testimonial-card">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Останні 3 сесії були особливо значущими. Я реально можу сказати,
+                що у нас все добре. Продовжуємо ходити — наступного тижня, як
+                завжди!
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">О</div>
+                <div>
+                  <div class="t-name">Олена</div>
+                  <div class="t-context">Парна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Нападів майже немає. А якщо є — вже вмію з ними справлятися. Дякую
-              за підтримку й розуміння.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">К</div>
-              <div>
-                <div class="testimonial-name">Катерина</div>
-                <div class="testimonial-context">Індивідуальна терапія</div>
+            <div class="testimonial-card">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Нападів майже немає. А якщо є — вже вмію з ними справлятися.
+                Дякую за підтримку й розуміння.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">К</div>
+                <div>
+                  <div class="t-name">Катерина</div>
+                  <div class="t-context">Індивідуальна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Наша сім'я дуже вдячна. Ви допомогли нам краще почути одне одного.
-              За довгий час ми нарешті висловлюємо емоції без образ.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">Н</div>
-              <div>
-                <div class="testimonial-name">Наталія</div>
-                <div class="testimonial-context">Сімейна терапія</div>
+            <div class="testimonial-card">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Наша сім'я дуже вдячна. Ви допомогли нам краще почути одне
+                одного. За довгий час ми нарешті висловлюємо емоції без образ.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">Н</div>
+                <div>
+                  <div class="t-name">Наталія</div>
+                  <div class="t-context">Сімейна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Ми зробили чудову роботу з видимими результатами! Дякую —
-              обов'язково поділюся деталями, як тільки розгрібуся зі справами.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">І</div>
-              <div>
-                <div class="testimonial-name">Ірина</div>
-                <div class="testimonial-context">Індивідуальна терапія</div>
+            <div class="testimonial-card">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Ми зробили чудову роботу з видимими результатами! Дякую —
+                обов'язково поділюся деталями, як тільки розгрібуся зі справами.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">І</div>
+                <div>
+                  <div class="t-name">Ірина</div>
+                  <div class="t-context">Індивідуальна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Мені полегшало після сеансу. Я заспокоїлася і можу нормально
-              аналізувати ситуацію. Так рада, що приходжу до вас.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">Д</div>
-              <div>
-                <div class="testimonial-name">Дарина</div>
-                <div class="testimonial-context">Індивідуальна терапія</div>
+            <div class="testimonial-card">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Мені полегшало після сеансу. Я заспокоїлася і можу нормально
+                аналізувати ситуацію. Так рада, що приходжу до вас.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">Д</div>
+                <div>
+                  <div class="t-name">Дарина</div>
+                  <div class="t-context">Індивідуальна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Set 2 (duplicate for infinite loop) -->
-          <div class="testimonial-card">
-            <blockquote>
-              Дякую за сесії! Зараз помічаю, як можу сама аналізувати свої
-              вчинки, і мені значно легше. Я нарешті знаю, чого хочу.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">М</div>
-              <div>
-                <div class="testimonial-name">Марія</div>
-                <div class="testimonial-context">Індивідуальна терапія</div>
+            <!-- Duplicates for seamless loop -->
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Дякую за сесії! Зараз помічаю, як можу сама аналізувати свої
+                вчинки, і мені значно легше. Я нарешті знаю, чого хочу.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">М</div>
+                <div>
+                  <div class="t-name">Марія</div>
+                  <div class="t-context">Індивідуальна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Останні 3 сесії були особливо значущими. Я реально можу сказати,
-              що у нас все добре. Продовжуємо ходити — наступного тижня, як
-              завжди!
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">О</div>
-              <div>
-                <div class="testimonial-name">Олена</div>
-                <div class="testimonial-context">Парна терапія</div>
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Останні 3 сесії були особливо значущими. Я реально можу сказати,
+                що у нас все добре. Продовжуємо ходити — наступного тижня, як
+                завжди!
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">О</div>
+                <div>
+                  <div class="t-name">Олена</div>
+                  <div class="t-context">Парна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Нападів майже немає. А якщо є — вже вмію з ними справлятися. Дякую
-              за підтримку й розуміння.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">К</div>
-              <div>
-                <div class="testimonial-name">Катерина</div>
-                <div class="testimonial-context">Індивідуальна терапія</div>
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Нападів майже немає. А якщо є — вже вмію з ними справлятися.
+                Дякую за підтримку й розуміння.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">К</div>
+                <div>
+                  <div class="t-name">Катерина</div>
+                  <div class="t-context">Індивідуальна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Наша сім'я дуже вдячна. Ви допомогли нам краще почути одне одного.
-              За довгий час ми нарешті висловлюємо емоції без образ.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">Н</div>
-              <div>
-                <div class="testimonial-name">Наталія</div>
-                <div class="testimonial-context">Сімейна терапія</div>
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Наша сім'я дуже вдячна. Ви допомогли нам краще почути одне
+                одного. За довгий час ми нарешті висловлюємо емоції без образ.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">Н</div>
+                <div>
+                  <div class="t-name">Наталія</div>
+                  <div class="t-context">Сімейна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Ми зробили чудову роботу з видимими результатами! Дякую —
-              обов'язково поділюся деталями, як тільки розгрібуся зі справами.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">І</div>
-              <div>
-                <div class="testimonial-name">Ірина</div>
-                <div class="testimonial-context">Індивідуальна терапія</div>
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Ми зробили чудову роботу з видимими результатами! Дякую —
+                обов'язково поділюся деталями.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">І</div>
+                <div>
+                  <div class="t-name">Ірина</div>
+                  <div class="t-context">Індивідуальна терапія</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="testimonial-card">
-            <blockquote>
-              Мені полегшало після сеансу. Я заспокоїлася і можу нормально
-              аналізувати ситуацію. Так рада, що приходжу до вас.
-            </blockquote>
-            <div class="testimonial-footer">
-              <div class="testimonial-avatar">Д</div>
-              <div>
-                <div class="testimonial-name">Дарина</div>
-                <div class="testimonial-context">Індивідуальна терапія</div>
+            <div class="testimonial-card" aria-hidden="true">
+              <div class="t-quote" aria-hidden="true">"</div>
+              <blockquote>
+                Мені полегшало після сеансу. Я заспокоїлася і можу нормально
+                аналізувати ситуацію. Так рада, що приходжу до вас.
+              </blockquote>
+              <div class="t-footer">
+                <div class="t-avatar" aria-hidden="true">Д</div>
+                <div>
+                  <div class="t-name">Дарина</div>
+                  <div class="t-context">Індивідуальна терапія</div>
+                </div>
               </div>
             </div>
           </div>
@@ -652,147 +926,329 @@
     <section class="faq" id="faq">
       <div class="faq-inner">
         <div class="faq-left">
-          <div class="section-tag">Часті запитання</div>
-          <h2 class="section-title">Відповіді на<br />ваші <em>сумніви</em></h2>
-          <p>
+          <div class="section-eyebrow reveal" data-reveal="top" data-delay="0">Часті запитання</div>
+          <h2 class="section-title reveal" data-reveal="bottom" data-delay="60">Відповіді на ваші сумніви</h2>
+          <p class="faq-lead reveal" data-reveal="bottom" data-delay="120">
             Перший крок до терапії — найважчий. Тут я відповідаю на запитання,
-            які виникають найчастіше перед початком роботи.
+            які виникають найчастіше.
           </p>
           <a
             href="https://t.me/nchernygina"
-            class="btn-primary"
+            class="btn-primary reveal" data-reveal="bottom" data-delay="180"
             target="_blank"
             rel="noopener"
-            >Поставити запитання</a
           >
-          <div class="faq-img">
-            <img
-              src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=700&auto=format&fit=crop&q=80"
-              alt="Комфортне середовище для терапії"
-            />
-          </div>
+            <span>Поставити запитання</span>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 8h10M9 4l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
         </div>
 
         <div class="faq-list">
-          <div class="faq-item">
+          <div class="faq-item reveal" data-reveal="right" data-delay="0">
             <button class="faq-q" aria-expanded="false">
               <span>Як часто потрібно ходити на терапію?</span>
-              <div class="faq-icon">+</div>
+              <div class="faq-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
             </button>
-            <div class="faq-a">
-              <p>
-                Частота сесій є індивідуальною. Найчастіше ми зустрічаємося 2
-                рази на тиждень. Можливо 1 або 3 рази залежно від запиту та
-                стану. Для підтримуючої терапії підходить формат раз на 2 тижні.
-              </p>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                <p>
+                  Частота сесій є індивідуальною. Найчастіше ми зустрічаємося 2
+                  рази на тиждень. Можливо 1 або 3 рази залежно від запиту та
+                  стану. Для підтримуючої терапії підходить формат раз на 2
+                  тижні.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="faq-item">
+
+          <div class="faq-item reveal" data-reveal="right" data-delay="60">
             <button class="faq-q" aria-expanded="false">
               <span>Як швидко можна відчути результати?</span>
-              <div class="faq-icon">+</div>
+              <div class="faq-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
             </button>
-            <div class="faq-a">
-              <p>
-                Це залежить від структури особистості та характеру запиту. Після
-                діагностичних сесій я даю зворотний зв'язок щодо орієнтовних
-                термінів. Деякі зміни відчуваються вже в перші тижні.
-              </p>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                <p>
+                  Це залежить від структури особистості та характеру запиту.
+                  Після діагностичних сесій я даю зворотний зв'язок щодо
+                  орієнтовних термінів. Деякі зміни відчуваються вже в перші
+                  тижні.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="faq-item">
+
+          <div class="faq-item reveal" data-reveal="right" data-delay="120">
             <button class="faq-q" aria-expanded="false">
               <span>Чи є консультації конфіденційними?</span>
-              <div class="faq-icon">+</div>
+              <div class="faq-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
             </button>
-            <div class="faq-a">
-              <p>
-                Так, повністю — і онлайн, і офлайн. Конфіденційність може бути
-                закріплена в усному або письмовому контракті. Ваш простір
-                захищений.
-              </p>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                <p>
+                  Так, повністю — і онлайн, і офлайн. Конфіденційність може бути
+                  закріплена в усному або письмовому контракті. Ваш простір
+                  захищений.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="faq-item">
+
+          <div class="faq-item reveal" data-reveal="right" data-delay="180">
             <button class="faq-q" aria-expanded="false">
               <span>Чи можна працювати онлайн?</span>
-              <div class="faq-icon">+</div>
+              <div class="faq-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
             </button>
-            <div class="faq-a">
-              <p>
-                Так, я проводжу сесії як особисто в Дніпрі, так і онлайн.
-                Онлайн-формат настільки ж ефективний і підходить клієнтам з
-                будь-якої точки світу.
-              </p>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                <p>
+                  Так, я проводжу сесії як особисто в Дніпрі, так і онлайн.
+                  Онлайн-формат настільки ж ефективний і підходить клієнтам з
+                  будь-якої точки світу.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="faq-item">
+
+          <div class="faq-item reveal" data-reveal="right" data-delay="240">
             <button class="faq-q" aria-expanded="false">
               <span>Що таке TFP-терапія?</span>
-              <div class="faq-icon">+</div>
+              <div class="faq-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
             </button>
-            <div class="faq-a">
-              <p>
-                Трансферно-фокусована психотерапія (TFP) — це науково
-                обґрунтований метод, ефективний при розладах особистості
-                (зокрема МРО та НРО). Я є сертифікованим TFP-терапевтом і членом
-                Української групи TFP-терапевтів.
-              </p>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                <p>
+                  Трансферно-фокусована психотерапія (TFP) — науково
+                  обґрунтований метод, ефективний при розладах особистості (МРО
+                  та НРО). Я є сертифікованим TFP-терапевтом і членом
+                  Української групи TFP-терапевтів.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="faq-item">
+
+          <div class="faq-item reveal" data-reveal="right" data-delay="300">
             <button class="faq-q" aria-expanded="false">
               <span>Як записатися на першу сесію?</span>
-              <div class="faq-icon">+</div>
+              <div class="faq-toggle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 5v14M5 12h14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
             </button>
-            <div class="faq-a">
-              <p>
-                Напишіть мені в Telegram або зателефонуйте. Ми узгодимо зручний
-                час і формат. Перша зустріч — діагностична, вона оплачується
-                окремо.
-              </p>
+            <div class="faq-a" role="region">
+              <div class="faq-a-inner">
+                <p>
+                  Напишіть мені в Telegram або зателефонуйте. Ми узгодимо
+                  зручний час і формат. Перша зустріч — діагностична, вона
+                  оплачується окремо.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-      <div class="cta-inner">
-        <div>
-          <div class="section-tag">Зробіть перший крок</div>
-          <h2 class="section-title">
-            Готові розпочати<br />шлях до <em>себе</em>?
+    <!-- CONTACT / CTA -->
+    <section class="contact" id="contact">
+      <div class="contact-bg" aria-hidden="true">
+        <div class="contact-blob contact-blob-1"></div>
+        <div class="contact-blob contact-blob-2"></div>
+      </div>
+      <div class="contact-inner">
+        <div class="contact-content">
+          <div class="section-eyebrow section-eyebrow-light reveal" data-reveal="top" data-delay="0">
+            Зробіть перший крок
+          </div>
+          <h2 class="section-title contact-title reveal" data-reveal="bottom" data-delay="60">
+            Готові розпочати<br />шлях до себе?
           </h2>
-          <p>
+          <p class="contact-lead reveal" data-reveal="bottom" data-delay="120">
             Запис на консультацію — це не зобов'язання. Це просто розмова, щоб
             зрозуміти, чи підходимо ми одне одному. Я відповім протягом дня.
           </p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap reveal" data-reveal="bl" data-delay="180">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="formName">Ваше ім'я</label>
+                <input
+                  type="text"
+                  id="formName"
+                  name="name"
+                  placeholder="Як до вас звертатися?"
+                  autocomplete="given-name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="formMessage">Повідомлення</label>
+                <textarea
+                  id="formMessage"
+                  name="message"
+                  placeholder="Розкажіть, що вас турбує або просто запитайте..."
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-form-submit">
+                <span class="btn-submit-text">Надіслати</span>
+                <span class="btn-submit-ok" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M20 6L9 17l-5-5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Відправлено!
+                </span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Divider -->
+          <div class="contact-divider reveal" data-reveal="bottom" data-delay="240">
+            <span>або напишіть одразу</span>
+          </div>
+
+          <!-- Quick chat option -->
+          <div class="contact-chat reveal" data-reveal="bottom" data-delay="300">
             <a
               href="https://t.me/nchernygina"
-              class="btn-white"
+              class="chat-btn"
               target="_blank"
               rel="noopener"
-              >Написати в Telegram</a
             >
-            <a
-              href="tel:+380961253385"
-              class="btn-white"
-              style="
-                background: rgba(255, 255, 255, 0.15);
-                color: #fff;
-                border: 1.5px solid rgba(255, 255, 255, 0.3);
-              "
-              >+38 (096) 125-33-85</a
-            >
+              <div class="chat-btn-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8.02c-.12.56-.46.7-.93.43l-2.56-1.89-1.23 1.19c-.14.13-.25.25-.51.25l.18-2.58 4.68-4.23c.2-.18-.04-.28-.32-.1l-5.8 3.65-2.5-.78c-.54-.17-.55-.54.12-.8l9.74-3.76c.46-.17.86.11.63.6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div class="chat-btn-text">
+                <span class="chat-btn-label">Написати в Telegram</span>
+                <span class="chat-btn-sub"
+                  >Відповім протягом кількох годин</span
+                >
+              </div>
+              <div class="chat-btn-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
+            <a href="tel:+380961253385" class="chat-btn chat-btn-phone">
+              <div class="chat-btn-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <div class="chat-btn-text">
+                <span class="chat-btn-label">+38 (096) 125-33-85</span>
+                <span class="chat-btn-sub">Пн–Пт, 9:00–20:00</span>
+              </div>
+              <div class="chat-btn-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="cta-image">
+
+        <div class="contact-visual reveal" data-reveal="right" data-delay="60">
           <img
             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=80"
             alt="Почніть терапію сьогодні"
+            loading="lazy"
+            width="520"
+            height="400"
           />
         </div>
       </div>
@@ -801,22 +1257,72 @@
     <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
-        <a href="#header" class="footer-logo">Анастасія Хотімська</a>
-        <ul class="footer-links">
-          <li><a href="#concerns">Запити</a></li>
-          <li><a href="#about">Про мене</a></li>
-          <li><a href="#services">Послуги</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-        <div class="footer-lang">
-          <a href="/index.html" class="active">УКР</a>
-          <a href="/index-en.html">ENG</a>
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#hero" class="footer-logo">Анастасія Хотімська</a>
+            <p class="footer-tagline">Психолог-психотерапевт</p>
+          </div>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <div class="footer-nav-group">
+              <span class="footer-nav-title">Навігація</span>
+              <ul role="list">
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#approach">Підхід</a></li>
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="#faq">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav-group">
+              <span class="footer-nav-title">Контакти</span>
+              <ul role="list">
+                <li><a href="tel:+380961253385">+38 (096) 125-33-85</a></li>
+                <li>
+                  <a
+                    href="https://t.me/nchernygina"
+                    target="_blank"
+                    rel="noopener"
+                    >Telegram</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="footer-lang-block">
+            <span class="footer-nav-title">Мова</span>
+            <div class="footer-lang">
+              <a href="/index.html" class="active">УКР</a>
+              <a href="/index-en.html">ENG</a>
+            </div>
+          </div>
         </div>
-        <p class="footer-copy">
-          © 2024 Хотімська Анастасія. Усі права захищені.
-        </p>
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            © 2024 Хотімська Анастасія. Усі права захищені.
+          </p>
+          <p class="footer-note">Дніпро та онлайн</p>
+        </div>
       </div>
     </footer>
-    <script src="assets/js/script.js"></script>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Повернутися нагору">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 19V5M5 12l7-7 7 7"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script src="assets/script.js"></script>
   </body>
 </html>
