@@ -676,7 +676,7 @@ ul {
   line-height: 1.12;
   letter-spacing: -0.02em;
   color: var(--ink);
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.6rem;
 }
 .hero-title-accent {
   color: var(--sage-dk);
@@ -689,21 +689,20 @@ ul {
   color: var(--ink-60);
   line-height: 1.8;
   max-width: 400px;
-  margin-bottom: 2.8rem;
 }
 
 .hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 3.5rem;
 }
 
 .hero-stats {
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
   border-top: 1px solid var(--border);
 }
 .stat {
@@ -1177,7 +1176,7 @@ ul {
 .process-step {
   background: var(--off-white);
   border-radius: var(--radius-xl);
-  padding: 2.2rem;
+  padding: 1.2rem;
   position: relative;
   overflow: hidden;
   transition:
